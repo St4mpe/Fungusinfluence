@@ -1,0 +1,28 @@
+@import url("färger.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: var(--mainBackground);
+    padding: 1rem;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--headerColor);
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--navColor);
+}
+a:hover{
+    color: var(--navHoverColor);
+    text-decoration: underline;
+}

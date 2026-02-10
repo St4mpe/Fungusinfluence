@@ -1,0 +1,13 @@
+@import url("färger.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+    background:var(--mainBackground);
+    color: var(--headerColor);
+}
