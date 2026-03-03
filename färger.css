@@ -1,7 +1,8 @@
 :root{
-    --mainBackground: #0f0f0f;
-    --accentBackround: #1f2d24;
-    --headerColor: #e5e5e5;
-    --navColor: rgb(177, 177, 177);
-    --navHoverColor: #c2a83e;
+    --mainBackground: #1a1a1a;
+    --headerBackround: #1f2a1f;
+    --headerTextColor: #f5f5f5;
+    --navColor: #f5f5f5;
+    --navHoverColor: #b04a1f;
+    --heroColor: #d6c7a1;
 }

@@ -9,7 +9,9 @@
 <body>
     <?php require_once("_header.php");?>
     <section class="main">
-        
+        <section class="enviromentpic">
+            <h2>Endure & Survive</h2>
+        </section>
     </section>
     <?php require_once("_footer.php");?>
 </body>
