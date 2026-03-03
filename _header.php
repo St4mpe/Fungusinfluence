@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="headerStyle.css">
 <header>
-    <h1>Last Of Us</h1>
+    <img src="https://www.pngmart.com/files/22/The-Last-Of-Us-Logo-PNG-Pic.png" alt="">
     <nav>
         <a href="index.php">Home</a>
         <a href="#">About</a>

@@ -8,6 +8,6 @@ footer{
     display: grid;
     place-content: center;
     padding: 2rem;
-    background:var(--headerBackround);
+    background:var(--headerBackround);  
     color: var(--navColor);
 }
