@@ -7,21 +7,8 @@
 body{
     height: 100dvh;
 }
-.displayVartDuÄr{
-    background: var(--mainBackground);
-    padding-bottom: 4rem;
-}
-.displayVartDuÄr h1{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: var(--mainBackground);
-    color: var(--underrubrikColor);
-    font-size: 3rem;
-    text-decoration: underline;
-}
 .main{
-    height: 700px;
+    height: 1600px;
     background: var(--mainBackground);
 }
 .main nav{
@@ -36,6 +23,9 @@ body{
     text-decoration: none;
     font:bold 1.5rem system-ui;
     color: var(--underrubrikColor);
+}
+.bas{
+    text-decoration: underline;
 }
 .main nav a:hover{
     color: var(--navHoverColor);
@@ -61,6 +51,60 @@ body{
     text-align: center;
 }
 .firstPicture h2{
+    color: var(--textcolor);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+    font-size:1.8rem;
+}
+.secondPicture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 5rem;
+}
+.secondPicture img{
+    width: 40%;
+    height: 60%;
+}
+.secondPicture section{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.secondPicture p{
+    font-size:1.2rem;
+    color: var(--textcolor);
+    text-align: center;
+}
+.secondPicture h2{
+    color: var(--textcolor);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+    font-size:1.8rem;
+}
+.thirdPicture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 5rem;
+}
+.thirdPicture img{
+    width: 40%;
+    height: 30%;
+}
+.thirdPicture section{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.thirdPicture p{
+    font-size:1.2rem;
+    color: var(--textcolor);
+    text-align: center;
+}
+.thirdPicture h2{
     color: var(--textcolor);
     text-align: center;
     text-decoration: underline;
