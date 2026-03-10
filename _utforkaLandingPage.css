@@ -1,0 +1,69 @@
+@import url("färger.css");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100dvh;
+}
+.displayVartDuÄr{
+    background: var(--mainBackground);
+    padding-bottom: 4rem;
+}
+.displayVartDuÄr h1{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--mainBackground);
+    color: var(--underrubrikColor);
+    font-size: 3rem;
+    text-decoration: underline;
+}
+.main{
+    height: 700px;
+    background: var(--mainBackground);
+}
+.main nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem;
+    background: var(--mainBackground);
+}
+.main nav a{
+    text-decoration: none;
+    font:bold 1.5rem system-ui;
+    color: var(--underrubrikColor);
+}
+.main nav a:hover{
+    color: var(--navHoverColor);
+    text-decoration: underline;
+}
+.firstPicture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+}
+.firstPicture img{
+    width: 20%;
+    height: 28%;
+}
+.firstPicture section{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.firstPicture p{
+    font-size:1.2rem;
+    color: var(--textcolor);
+    text-align: center;
+}
+.firstPicture h2{
+    color: var(--textcolor);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+    font-size:1.8rem;
+}
