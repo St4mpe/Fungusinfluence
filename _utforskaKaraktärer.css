@@ -1,0 +1,33 @@
+@import url("färger.css");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100dvh;
+}
+.main{
+    height: 1800px;
+    background: var(--mainBackground);
+}
+.main nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem;
+    background: var(--mainBackground);
+}
+.main nav a{
+    text-decoration: none;
+    font:bold 1.5rem system-ui;
+    color: var(--underrubrikColor);
+}
+a.hereIAm{
+    text-decoration: underline !important;
+}
+.main nav a:hover{
+    color: var(--navHoverColor);
+    text-decoration: underline;
+}

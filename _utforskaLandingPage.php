@@ -12,7 +12,7 @@
         <nav>
             <a class="hereIAm" href="_utforskaLandingPage.php">Spelet</a>
             <a href="_utforksaTVSerien.php">Tv-Serien</a>
-            <a href="#">Karaktärerna</a>
+            <a href="_utforskaKaraktärer.php">Karaktärerna</a>
         </nav>
         <section>
             <section class="firstPicture">
