@@ -11,7 +11,7 @@
     <section class="main">
         <nav>
             <a class="hereIAm" href="_utforskaLandingPage.php">Spelet</a>
-            <a href="#">Tv-Serien</a>
+            <a href="_utforksaTVSerien.php">Tv-Serien</a>
             <a href="#">Karaktärerna</a>
         </nav>
         <section>
