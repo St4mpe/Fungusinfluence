@@ -10,7 +10,7 @@
     <?php require_once("_header.php");?>
     <section class="main">
         <nav>
-            <a class="bas" href="_utforskaLandingPage.php">Spelet</a>
+            <a class="hereIAm" href="_utforskaLandingPage.php">Spelet</a>
             <a href="#">Tv-Serien</a>
             <a href="#">Karaktärerna</a>
         </nav>
@@ -35,6 +35,13 @@
                     <p>En av anledningarna till att så många älskar The Last of Us är de starka karaktärerna. <br> Joel och Ellie utvecklar en relation som förändras genom hela resan, och spelaren får uppleva <br> både deras konflikter och deras tillit till varandra. Dialogen, <br> skådespelet och de små ögonblicken mellan actionsekvenserna gör att <br>berättelsen känns personlig och äkta.</p>
                 </section>
                 <img src="https://cdn.mos.cms.futurecdn.net/LpdBuHarLswxF8xz9kvTNX.jpg" alt="Pic of the last of us original copy">
+            </section>
+            <section class="forthPicture">
+                <img src="https://www.theloadout.com/wp-content/sites/theloadout/2022/08/the-last-of-us-remake-part-1-review-3.jpg" alt="Pic of the last of us original copy">
+                <section>
+                    <h2>Ett spel som förändrade berättande i spel</h2>
+                    <p>När The Last of Us släpptes hyllades det för sitt sätt att kombinera gameplay med en filmisk <br> och känslomässig berättelse. Spelet visade att berättelser i spel kan vara lika starka <br> och komplexa som i film och tv. Därför har det blivit en modern klassiker <br> och fortsätter att inspirera både spelare och skapare världen över.</p>
+                </section>
             </section>
         </section>
     </section>

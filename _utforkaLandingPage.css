@@ -8,7 +8,7 @@ body{
     height: 100dvh;
 }
 .main{
-    height: 1600px;
+    height: 1900px;
     background: var(--mainBackground);
 }
 .main nav{
@@ -24,8 +24,8 @@ body{
     font:bold 1.5rem system-ui;
     color: var(--underrubrikColor);
 }
-.bas{
-    text-decoration: underline;
+a.hereIAm{
+    text-decoration: underline !important;
 }
 .main nav a:hover{
     color: var(--navHoverColor);
@@ -105,6 +105,33 @@ body{
     text-align: center;
 }
 .thirdPicture h2{
+    color: var(--textcolor);
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+    font-size:1.8rem;
+}
+.forthPicture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 5rem;
+}
+.forthPicture img{
+    width: 40%;
+    height: 30%;
+}
+.forthPicture section{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.forthPicture p{
+    font-size:1.2rem;
+    color: var(--textcolor);
+    text-align: center;
+}
+.forthPicture h2{
     color: var(--textcolor);
     text-align: center;
     text-decoration: underline;
