@@ -26,10 +26,10 @@
                         <p>Joel: “You keep finding something to fight for”</p>
                     </section>
                 </section>
-                <img src="https://variety.com/wp-content/uploads/2023/03/The-Last-of-Us-Finale.jpg?w=1000" alt="Pic of the last of us original copy">
+                <img src="https://variety.com/wp-content/uploads/2023/03/The-Last-of-Us-Finale.jpg?w=1000" alt="Pic of Ellie and Joel on a balcony from the tv-series">
             </section>
             <section class="secondPicture">
-                <img src="https://variety.com/wp-content/uploads/2025/04/MixCollage-12-Apr-2025-10-49-PM-3432.jpg?w=1000&h=667&crop=1" alt="Pic of the last of us original copy">
+                <img src="https://variety.com/wp-content/uploads/2025/04/MixCollage-12-Apr-2025-10-49-PM-3432.jpg?w=1000&h=667&crop=1" alt="Pic of characters from the tv-series">
                 <section class="textArea">
                     <section>
                         <h2>Djupare fokus på människor</h2>
@@ -55,7 +55,7 @@
                 <img src="https://images.pushsquare.com/51709319e0bd3/large.jpg" alt="Pic of the last of us original copy">
             </section>
             <section class="forthPicture">
-                <img src="https://eevhh9hj2fv.exactdn.com/wp-content/uploads/2023/01/pasted-image-0-7.jpg?strip=all" alt="Pic of the last of us original copy">
+                <img src="https://eevhh9hj2fv.exactdn.com/wp-content/uploads/2023/01/pasted-image-0-7.jpg?strip=all" alt="Picture of Ellie and Joel infornt of destoryed buidlings from tv-series">
                 <section class="textArea">
                     <section>
                          <h2>En av de mest uppmärksammade speladaptionerna</h2>

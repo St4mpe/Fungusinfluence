@@ -36,10 +36,13 @@ a.hereIAm{
     flex-direction: row;
     justify-content: center;
     gap: 10rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .firstPicture img{
     width: 20%;
     height: 28%;
+    user-select: none;
 }
 .firstPicture section{
     margin-top: auto;
@@ -63,10 +66,13 @@ a.hereIAm{
     justify-content: center;
     gap: 4rem;
     padding-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .secondPicture img{
     width: 40%;
     height: 60%;
+    user-select: none;
 }
 .secondPicture section{
     margin-top: auto;
@@ -90,10 +96,13 @@ a.hereIAm{
     justify-content: center;
     gap: 4rem;
     padding-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .thirdPicture img{
     width: 40%;
     height: 30%;
+    user-select: none;
 }
 .thirdPicture section{
     margin-top: auto;
@@ -117,10 +126,13 @@ a.hereIAm{
     justify-content: center;
     gap: 4rem;
     padding-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .forthPicture img{
     width: 40%;
     height: 30%;
+    user-select: none;
 }
 .forthPicture section{
     margin-top: auto;
