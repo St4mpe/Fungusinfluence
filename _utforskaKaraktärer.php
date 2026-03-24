@@ -18,7 +18,10 @@
             <section class="container">
                 <section class="grid-item">
                     <img src="https://static.wikia.nocookie.net/thelastofus/images/d/d1/Part_I_Joel_infobox.png/revision/latest/scale-to-width-down/1000?cb=20230215182931" alt="Joel">
-                    <section class="overlay-text">Joel</section>
+                    <section class="overlay-text">
+                        <h2>Joel</h2>
+                        <p>A hardened survivor shaped by immense personal loss, Joel is fiercely protective of Ellie, pragmatic in dangerous situations, and willing to make morally complex choices to ensure her safety.</p>
+                    </section>
                 </section>
                 <section class="grid-item">
                     <img src="https://static.wikia.nocookie.net/thelastofus/images/e/e3/Part_I_Ellie_infobox.png/revision/latest/scale-to-width-down/1000?cb=20230215221635" alt="Ellie">
