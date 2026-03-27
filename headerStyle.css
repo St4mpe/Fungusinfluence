@@ -43,3 +43,19 @@ a:hover{
     transform: scale(1.05);
     user-select: none;
 }
+
+@media screen and (max-width:900px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    header nav{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header img{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
