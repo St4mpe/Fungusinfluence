@@ -54,7 +54,10 @@ body{
 }
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
-.form input[type="password"]:focus {
+.form input[type="password"]:focus,
+.form input[type="stad"]:focus,
+.form input[type="gata"]:focus,
+.form input[type="postnummer"]:focus{
     background: #777777;
 }
 .form input[type="submit"]{
