@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100dvh;
+}
+.main{
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.rutan{
+    padding: 1rem;
+    background: rgb(224, 224, 224);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 30%;
+    min-height: 50%;
+    place-items: center;
+    place-content: center;
+}
+.rutan h1{
+    text-decoration: underline;
+}
+
