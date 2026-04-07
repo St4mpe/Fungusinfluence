@@ -8,7 +8,7 @@ body{
     height: 100dvh;
 }
 .main{
-    height: 1900px;
+    min-height: 1900px;
     background: var(--mainBackground);
 }
 .main nav{
@@ -149,4 +149,34 @@ a.hereIAm{
     text-decoration: underline;
     margin-bottom: 0.7rem;
     font-size:1.8rem;
+}
+
+@media screen and (max-width:1000px){
+    .firstPicture{
+        flex-direction: column;
+    }
+    .firstPicture img{
+        width: 100%;
+    }
+    .secondPicture{
+        flex-direction: column;
+    }
+    .secondPicture img{
+        width: 100%;
+    }
+    .thirdPicture{
+        flex-direction: column;
+    }
+    .thirdPicture img{
+        width: 100%;
+    }
+    .forthPicture{
+        flex-direction: column;
+    }
+    .forthPicture img{
+        width: 100%;
+    }
+    .forthPicture p{
+        padding-bottom: 3rem;
+    }
 }

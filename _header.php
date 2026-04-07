@@ -5,5 +5,6 @@
         <a href="index.php">Hem</a>
         <a href="_utforskaLandingPage.php">Utforska världen</a>
         <a href="#">Shoppa merch</a>
+        <a href="Konto.php">Konto</a>
     </nav>
 </header>

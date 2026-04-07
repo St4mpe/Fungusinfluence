@@ -8,7 +8,7 @@ body{
     height: 100dvh;
 }
 .main{
-    height: 1800px;
+    min-height: 1800px;
     background: var(--mainBackground);
 }
 .main nav{
@@ -171,4 +171,34 @@ a.hereIAm{
 .quoteRuta p{
     color: var(--quoteColor);
     font-size: 14px;
+}
+
+@media screen and (max-width:1000px){
+    .firstPicture{
+        flex-direction: column;
+    }
+    .firstPicture img{
+        width: 100%;
+    }
+    .secondPicture{
+        flex-direction: column;
+    }
+    .secondPicture img{
+        width: 100%;
+    }
+    .thirdPicture{
+        flex-direction: column;
+    }
+    .thirdPicture img{
+        width: 100%;
+    }
+    .forthPicture{
+        flex-direction: column;
+    }
+    .forthPicture img{
+        width: 100%;
+    }
+    .textArea{
+        padding-bottom: 2rem;
+    }
 }
