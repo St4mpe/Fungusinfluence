@@ -17,6 +17,23 @@ if(isset($_POST['create']))
     $result=mysqli_query($conn,$sql);
 }
 
+if (isset($_POST['login']))
+{
+    $username=$_POST['username'];
+    $userpassword=$_POST['password'];
+
+    $sql = "SELECT user FROM userinfo";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($row["user"] == $username)
+        {
+            echo $row["user"]; 
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +60,7 @@ if(isset($_POST['create']))
             <form class="login-form" action="Konto.php" method="POST">
                 <input type="text" name="username" placeholder="Username"/>
                 <input type="password" name="password" placeholder="Password"/>
-                <input type="submit" value="Login"/>
+                <input type="submit" value="Login" name="login"/>
                 <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
         </div>
