@@ -13,6 +13,7 @@ if(isset($_POST['create']))
     $userstad=$_POST['stad'];
     $usergata=$_POST['gata'];
     $userpostnummer=$_POST['postnummer'];
+    
     $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$username','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
     $result=mysqli_query($conn,$sql);
 }
@@ -25,7 +26,8 @@ if (isset($_POST['login']))
     $sql = "SELECT user, pass FROM userinfo";
     $result = $conn->query($sql);
 
-    if ($result -> num_rows > 0) {
+    if ($result -> num_rows > 0) 
+    {
         $row = $result -> fetch_assoc();
         if ($row["user"] == $username && $row["pass"] == $userpassword)
         {
