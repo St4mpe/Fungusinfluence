@@ -26,6 +26,9 @@ $row = $result -> fetch_assoc();
         <p><?= $row['id'] ?></p>
         <p><?= $row['user'] ?></p>
         <p><?= $row['mail'] ?></p>
+        <p><?= $row['stad'] ?></p>
+        <p><?= $row['road'] ?></p>
+        <p><?= $row['postnummer'] ?></p>
     </section>
 </body>
 </html>
