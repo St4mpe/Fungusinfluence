@@ -22,14 +22,15 @@ if (isset($_POST['login']))
     $username=$_POST['username'];
     $userpassword=$_POST['password'];
 
-    $sql = "SELECT user FROM userinfo";
+    $sql = "SELECT user, pass FROM userinfo";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if ($row["user"] == $username)
+    if ($result -> num_rows > 0) {
+        $row = $result -> fetch_assoc();
+        if ($row["user"] == $username && $row["pass"] == $userpassword)
         {
-            echo $row["user"]; 
+            header("Location: MyPage.php");
+            exit();
         }
     }
 }
