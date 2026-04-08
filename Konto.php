@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host="localhost";
 $user="root";
 $pass="";
@@ -13,27 +15,25 @@ if(isset($_POST['create']))
     $userstad=$_POST['stad'];
     $usergata=$_POST['gata'];
     $userpostnummer=$_POST['postnummer'];
-    
+
     $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$username','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
     $result=mysqli_query($conn,$sql);
 }
 
 if (isset($_POST['login']))
 {
-    $username=$_POST['username'];
-    $userpassword=$_POST['password'];
+    $username = $_POST['username'];
+    $userpassword = $_POST['password'];
 
-    $sql = "SELECT user, pass FROM userinfo";
+    $sql = "SELECT id, user, pass FROM userinfo WHERE user = '$username' AND pass = '$userpassword'";
     $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
 
-    if ($result -> num_rows > 0) 
+    if ($row)
     {
-        $row = $result -> fetch_assoc();
-        if ($row["user"] == $username && $row["pass"] == $userpassword)
-        {
-            header("Location: MyPage.php");
-            exit();
-        }
+        $_SESSION['loggedInUserId'] = $row["id"];
+        header("Location: MyPage.php");
+        exit();
     }
 }
 
