@@ -12,7 +12,7 @@ if(isset($_POST['create']))
     $useremail=$_POST['email'];
     $userstad=$_POST['stad'];
     $usergata=$_POST['gata'];
-    $userpostnummer=$POST['postnummer'];
+    $userpostnummer=$_POST['postnummer'];
     $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$username','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
     $result=mysqli_query($conn,$sql);
 }
