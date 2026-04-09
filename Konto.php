@@ -22,10 +22,10 @@ if(isset($_POST['create']))
 
 if (isset($_POST['login']))
 {
-    $username = $_POST['username'];
+    $usermail = $_POST['mail'];
     $userpassword = $_POST['password'];
 
-    $sql = "SELECT id, user, pass FROM userinfo WHERE user = '$username' AND pass = '$userpassword'";
+    $sql = "SELECT id, mail, pass FROM userinfo WHERE mail = '$usermail' AND pass = '$userpassword'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 
@@ -61,7 +61,7 @@ if (isset($_POST['login']))
                 <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
             <form class="login-form" action="Konto.php" method="POST">
-                <input type="text" name="username" placeholder="Username"/>
+                <input type="text" name="mail" placeholder="Email"/>
                 <input type="password" name="password" placeholder="Password"/>
                 <input type="submit" value="Login" name="login"/>
                 <p class="message">Not registered? <a href="#">Create an account</a></p>
