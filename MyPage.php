@@ -22,7 +22,8 @@ $row = $result -> fetch_assoc();
     <link rel="stylesheet" href="styleMyPage.css">
 </head>
 <body>
-    <section>
+    <?php require_once("_header.php");?>
+    <section class="main">
         <p><?= $row['id'] ?></p>
         <p><?= $row['user'] ?></p>
         <p><?= $row['mail'] ?></p>
@@ -30,5 +31,6 @@ $row = $result -> fetch_assoc();
         <p><?= $row['road'] ?></p>
         <p><?= $row['postnummer'] ?></p>
     </section>
+    <?php require_once("_footer.php");?>
 </body>
 </html>

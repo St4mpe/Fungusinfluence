@@ -1,5 +1,13 @@
+@import url("färger.css");
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.main{
+    min-height: 100dvh;
+    background: var(--mainBackground);
+}
+.main p{
+    color: var(--textcolor);
 }

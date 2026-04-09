@@ -32,6 +32,7 @@ if (isset($_POST['login']))
     if ($row)
     {
         $_SESSION['loggedInUserId'] = $row["id"];
+        $_SESSION['userLoggedIn'] = true;
         header("Location: MyPage.php");
         exit();
     }
