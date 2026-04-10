@@ -58,7 +58,7 @@ if (isset($_POST['login']))
             <form class="login-form" action="Konto.php" method="POST">
                 <input type="text" name="mail" placeholder="Email"/>
                 <input type="password" name="password" placeholder="Password"/>
-                <input type="submit" value="Login s" name="login"/>
+                <input type="submit" value="Login" name="login"/>
                 <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
         </section>

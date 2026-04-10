@@ -7,7 +7,7 @@ require_once("functions.php");
     <nav>
         <a href="index.php">Hem</a>
         <a href="_utforskaLandingPage.php">Utforska världen</a>
-        <a href="#">Shoppa merch</a>
+        <a href="webbshop.php">Shoppa merch</a>
         <?php 
         
         if (isset($_SESSION['userLoggedIn']))

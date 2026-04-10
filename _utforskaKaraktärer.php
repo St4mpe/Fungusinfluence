@@ -52,7 +52,7 @@
                     </section>
                 </section>
                 <section class="grid-item">
-                    <img src="https://static.wikia.nocookie.net/thelastofus/images/0/0b/Sarah_Part_I_infobox.png/revision/latest/scale-to-width-down/1000?cb=20230815204341" alt="">
+                    <img src="https://static.wikia.nocookie.net/thelastofus/images/0/0b/Sarah_Part_I_infobox.png/revision/latest/scale-to-width-down/1000?cb=20230815204341" alt="Sarah">
                     <section class="overlay-text">
                         <h2>Sarah</h2>
                         <p>Joel’s daughter, innocent, loving, and full of hope. Her tragic fate profoundly impacts Joel, shaping his protective instincts, emotional journey, and the moral complexities of his actions.</p>
