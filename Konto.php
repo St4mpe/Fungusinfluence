@@ -43,8 +43,8 @@ if (isset($_POST['login']))
     <script src="konto.js" defer></script>
 </head>
 <body>
-    <div class="login-page">
-        <div class="form">
+    <section class="login-page">
+        <section class="form">
             <form class="register-form" action="Konto.php" method="POST">
                 <input type="text" name="name" placeholder="Namn"/>
                 <input type="password" name="password" placeholder="Lösenord"/>
@@ -58,10 +58,10 @@ if (isset($_POST['login']))
             <form class="login-form" action="Konto.php" method="POST">
                 <input type="text" name="mail" placeholder="Email"/>
                 <input type="password" name="password" placeholder="Password"/>
-                <input type="submit" value="Login" name="login"/>
+                <input type="submit" value="Login s" name="login"/>
                 <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
-        </div>
-    </div>
+        </section>
+    </section>
 </body>
 </html>

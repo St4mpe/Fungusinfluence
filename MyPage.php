@@ -25,13 +25,28 @@ if (isset($_POST['logout']))
 <body>
     <?php require_once("_header.php");?>
     <section class="main">
-        <p><?= $row['id'] ?></p>
-        <p><?= $row['user'] ?></p>
-        <p><?= $row['mail'] ?></p>
-        <p><?= $row['stad'] ?></p>
-        <p><?= $row['road'] ?></p>
-        <p><?= $row['postnummer'] ?></p>
-        <section>
+        <section class="textUppe">
+            <h1>Hej, <?= $row['user'] ?></h1>
+        </section>
+        <section class="userinfo">
+            <h2 class="userinfotitle">Account information</h2>
+            <section class="infoStack">
+                <section class="textinfo">
+                    <h2>Namn:</h2>
+                    <p><?= $row['user'] ?></p>
+                </section>
+                <section class="textinfo">
+                    <h2>Mail:</h2>
+                    <p><?= $row['mail'] ?></p>
+                </section>
+                <section class="textinfo">
+                    <h2>Adress:</h2>
+                    <p><?= $row['road'] ?></p>
+                    <p><?= $row['stad'] ?>, <?= $row['postnummer'] ?></p>
+                </section>
+            </section>
+        </section>
+        <section class="form">
             <form class="logout-form" action="MyPage.php" method="POST">
                 <input type="submit" value="Log out" name="logout"/>
             </form>
