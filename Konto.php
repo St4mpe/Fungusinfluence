@@ -26,7 +26,7 @@ if (isset($_POST['login']))
     $userpassword = $_POST['password'];
 
     $sql = "SELECT id, mail, pass FROM userinfo WHERE mail = '$usermail' AND pass = '$userpassword'";
-    $result = $conn->query($sql);
+    $result = mysqli_query($conn,$sql);
     $row = $result->fetch_assoc();
 
     if ($row)
