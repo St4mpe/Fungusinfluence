@@ -1,16 +1,17 @@
-<?php 
-session_start();
-
-$host="localhost";
-$user="root";
-$pass="";
-$db="fungus";
-$conn=mysqli_connect($host, $user, $pass, $db);
+<?php  
+require_once("functions.php");
 
 $loggedinUserId = $_SESSION['loggedInUserId'];
 $sql = "SELECT * FROM userinfo WHERE id = '$loggedinUserId'";
 $result = $conn->query($sql);
 $row = $result -> fetch_assoc();
+
+if (isset($_POST['logout']))
+{
+    $_SESSION['userLoggedIn'] = false;
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +31,11 @@ $row = $result -> fetch_assoc();
         <p><?= $row['stad'] ?></p>
         <p><?= $row['road'] ?></p>
         <p><?= $row['postnummer'] ?></p>
+        <section>
+            <form class="logout-form" action="MyPage.php" method="POST">
+                <input type="submit" value="Log out" name="logout"/>
+            </form>
+        </section>
     </section>
     <?php require_once("_footer.php");?>
 </body>

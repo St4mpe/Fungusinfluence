@@ -1,6 +1,5 @@
 <?php 
-session_start();
-
+require_once("functions.php");
 ?>
 <link rel="stylesheet" href="headerStyle.css">
 <header>
@@ -10,17 +9,29 @@ session_start();
         <a href="_utforskaLandingPage.php">Utforska världen</a>
         <a href="#">Shoppa merch</a>
         <?php 
-        if ($_SESSION['userLoggedIn'] == 1)
+        
+        if (isset($_SESSION['userLoggedIn']))
         {?>
-            <a href="MyPage.php">Konto</a>
+            <?php 
+            if ($_SESSION['userLoggedIn'] == 1)
+            {?>
+                <a href="MyPage.php">Konto</a>
+            <?php
+            }
+            else
+            {?>
+                <a href="Konto.php">Logga in</a>
+                <?php
+            }
+            ?>
         <?php  
         } 
         else
         {?>
-            <a href="Konto.php">Logga in</a>
-        
+            <a href="Konto.php">Logga in</a>    
             <?php
-        }?>
+        }
+        ?>
 
     </nav>
 </header>

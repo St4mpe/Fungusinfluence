@@ -20,7 +20,7 @@ header nav{
     flex-direction: row;
     gap: 1.5rem;
     margin-top: 2rem;
-    margin-right: 6rem;
+    margin-right: 2rem;
     user-select: none;
     background: var(--headerBackround);
 }
