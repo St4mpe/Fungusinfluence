@@ -29,7 +29,7 @@ if (isset($_POST['logout']))
             <h1>Hej, <?= $row['user'] ?></h1>
         </section>
         <section class="userinfo">
-            <h2 class="userinfotitle">Account information</h2>
+            <h2 class="infotitle">Account information</h2>
             <section class="infoStack">
                 <section class="textinfo">
                     <h2>Namn:</h2>
@@ -44,6 +44,12 @@ if (isset($_POST['logout']))
                     <p><?= $row['road'] ?></p>
                     <p><?= $row['stad'] ?>, <?= $row['postnummer'] ?></p>
                 </section>
+            </section>
+        </section>
+        <section class="orderinfo">
+            <h2 class="infotitle">Ordrar</h2>
+            <section class="orderstack">
+
             </section>
         </section>
         <section class="form">
