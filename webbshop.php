@@ -28,7 +28,8 @@
                         <?php if (isset($_SESSION['userLoggedIn']))
                         { 
                             if ($_SESSION['userLoggedIn'] == 1) 
-                            {?>
+                            {
+                                ?>
                                 <p class="varan">Hoodie - 500kr</p>
                                 <section class="till-korgen-knapp">
                                     <a href="#">Lägg i korgen</a>
