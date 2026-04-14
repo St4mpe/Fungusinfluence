@@ -33,17 +33,14 @@
     padding: 5rem 4rem;
 }
 .grid-item {
-    position: relative;
     overflow: hidden;
     border: 1px solid black;
     width: clamp(300px, 100%, 100vw);
-    padding-top: 100%;
     background: var(--webbshopKortBackground);
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25), 0 5px 5px 0 rgba(0, 0, 0, 0.25);
 }
 .grid-item::before {
     content: "";
-    position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
@@ -53,4 +50,32 @@
 .grid-item:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 12px var(--navHoverColor);
+}
+.grid-item-content img{
+    width: 100%;
+    padding: 2rem 3rem 2rem 3rem;
+}
+.till-korgen-knapp {
+    display: grid;
+    place-items: center;
+}
+.varan{
+    color: var(--textcolor);
+    text-align: center;
+    margin: -1rem 0rem 1rem;
+    font-size: 1.3rem;
+}
+.till-korgen-knapp a{
+    text-decoration: none;
+    color: var(--textcolor);
+    margin: 0rem 0rem 2rem 0rem;
+    background: var(--headerBackround);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    outline: black 1px solid;
+}
+.till-korgen-knapp a:hover{
+    text-decoration: none;
+    color: var(--navHoverColor);
+    text-shadow: 0px 0px 12px var(--navHoverColor);
 }

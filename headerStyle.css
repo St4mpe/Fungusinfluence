@@ -27,7 +27,7 @@ header nav{
 header nav a{
     text-decoration: none;
     color: var(--navColor);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     transition: transform .1s;
     user-select: none;
 }
@@ -42,6 +42,10 @@ a:hover{
     text-decoration: underline;
     transform: scale(1.05);
     user-select: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
 }
 
 @media screen and (max-width:900px){
