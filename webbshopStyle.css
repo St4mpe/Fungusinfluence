@@ -65,21 +65,10 @@
     margin: -1rem 0rem 1rem;
     font-size: 1.3rem;
 }
-.till-korgen-knapp a{
-    text-decoration: none;
-    color: var(--textcolor);
-    margin: 0rem 0rem 2rem 0rem;
-    background: var(--headerBackround);
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-    outline: black 1px solid;
+.till-korgen-knapp form input[type="submit"]{
+    font-family: Times New Roman;
+    font-size: 16px;
 }
-.till-korgen-knapp a:hover{
-    text-decoration: none;
-    color: var(--navHoverColor);
-    text-shadow: 0px 0px 12px var(--navHoverColor);
-}
-
 .till-korgen-knapp input[type="submit"]{
     outline: black solid 1px;
     background: var(--headerBackround);
