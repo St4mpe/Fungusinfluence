@@ -1,7 +1,14 @@
 <?php 
 require_once("functions.php");
 
-if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
+if(isset($_POST['addHoodieToKart']) || 
+isset($_POST['addT-ShirtToKart']) ||
+isset($_POST['addBoardGameToKart']) ||
+isset($_POST['addClickerFigurToKart']) ||
+isset($_POST['addEllieFigurToKart']) ||
+isset($_POST['addJoelFigurToKart']) ||
+isset($_POST['addElliePopFigurToKart']) ||
+isset($_POST['addMuggToKart']))
 {
     if(isset($_POST['vara']))
     {
@@ -98,7 +105,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Brädspel - 450kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addBoardGame" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="boardgame">
+                                        <input type="submit" value="Lägg i korgen" name="addBoardGameToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
@@ -114,7 +124,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Clicker Figur - 250kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addClickerFigur" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="clickerfigur">
+                                        <input type="submit" value="Lägg i korgen" name="addClickerFigurToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
@@ -130,7 +143,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Ellie Figur - 250kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addEllieFigur" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="elliefigur">
+                                        <input type="submit" value="Lägg i korgen" name="addEllieFigurToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
@@ -146,7 +162,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Joel Figur - 250kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addJoelFigur" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="joelfigur">
+                                        <input type="submit" value="Lägg i korgen" name="addJoelFigurToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
@@ -162,7 +181,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Pop Figure Ellie - 300kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addElliePopFigur" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="elliepopfigur">
+                                        <input type="submit" value="Lägg i korgen" name="addElliePopFigurToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
@@ -178,7 +200,10 @@ if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
                             {?>
                                 <p class="varan">Mugg - 150krs</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addMugg" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="mugg">
+                                        <input type="submit" value="Lägg i korgen" name="addMuggToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
