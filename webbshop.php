@@ -1,12 +1,12 @@
 <?php 
 require_once("functions.php");
 
-if(isset($_POST['addHoodieToKart']))
+if(isset($_POST['addHoodieToKart']) || isset($_POST['addT-ShirtToKart']))
 {
     if(isset($_POST['vara']))
     {
         $varan=$_POST['vara'];
-        $sql="SELECT * FROM orderinfo";
+        $sql="SELECT * FROM orderinfo WHERE produktid='$varan'";
         $result=mysqli_query($conn,$sql);
         while($row=mysqli_fetch_assoc($result)):
         if ($row['produktid']="$varan")
@@ -79,7 +79,10 @@ if(isset($_POST['addHoodieToKart']))
                             {?>
                                 <p class="varan">T-Shirt - 300kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addT-shirt" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="tshirt">
+                                        <input type="submit" value="Lägg i korgen" name="addT-ShirtToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }
