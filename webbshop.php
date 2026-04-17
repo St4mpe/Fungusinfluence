@@ -1,3 +1,21 @@
+<?php 
+require_once("functions.php");
+
+if(isset($_POST['addHoodieToKart']))
+{
+    $sql="SELECT * FROM orderinfo";
+    $result=mysqli_query($conn,$sql);
+    while($row=mysqli_fetch_assoc($result)):
+    if ($row['produktid']="hoodie")
+    {
+        $sql="UPDATE orderinfo SET produktantal=produktantal+1 WHERE produktid='hoodie'";
+        mysqli_query($conn, $sql);
+        header("Location: webbshop.php");
+    }   
+    endwhile;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +37,14 @@
                     <p>Inloggning krävs för att kunna handla</p>
                 <?php 
                 }
-            }?>
+            }
+            else
+            {
+                ?>
+                <p>Inloggning krävs för att kunna handla</p>
+                <?php 
+            }
+            ?>
         </section>
         <section class="container">
                 <section class="grid-item">
@@ -28,11 +53,12 @@
                         <?php if (isset($_SESSION['userLoggedIn']))
                         { 
                             if ($_SESSION['userLoggedIn'] == 1) 
-                            {
-                                ?>
+                            {?>
                                 <p class="varan">Hoodie - 500kr</p>
                                 <section class="till-korgen-knapp">
-                                    <a href="#">Lägg i korgen</a>
+                                     <form class="addHoodie" action="webbshop.php" method="POST">
+                                        <input type="submit" value="Lägg i korgen" name="addHoodieToKart"/>
+                                    </form>
                                 </section>
                             <?php 
                             }

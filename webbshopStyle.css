@@ -79,3 +79,21 @@
     color: var(--navHoverColor);
     text-shadow: 0px 0px 12px var(--navHoverColor);
 }
+
+.till-korgen-knapp input[type="submit"]{
+    outline: black solid 1px;
+    background: var(--headerBackround);
+    width: 100%;
+    border: 0;
+    padding: 0.7rem;
+    color: #FFFFFF;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.till-korgen-knapp input[type="submit"]:hover{
+    color: var(--navHoverColor);
+    text-shadow: 0px 0px 12px var(--navHoverColor);
+}
