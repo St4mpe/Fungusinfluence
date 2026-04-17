@@ -3,16 +3,20 @@ require_once("functions.php");
 
 if(isset($_POST['addHoodieToKart']))
 {
-    $sql="SELECT * FROM orderinfo";
-    $result=mysqli_query($conn,$sql);
-    while($row=mysqli_fetch_assoc($result)):
-    if ($row['produktid']="hoodie")
+    if(isset($_POST['vara']))
     {
-        $sql="UPDATE orderinfo SET produktantal=produktantal+1 WHERE produktid='hoodie'";
-        mysqli_query($conn, $sql);
-        header("Location: webbshop.php");
-    }   
-    endwhile;
+        $varan=$_POST['vara'];
+        $sql="SELECT * FROM orderinfo";
+        $result=mysqli_query($conn,$sql);
+        while($row=mysqli_fetch_assoc($result)):
+        if ($row['produktid']="$varan")
+        {
+            $sql="UPDATE orderinfo SET produktantal=produktantal+1 WHERE produktid='$varan'";
+            mysqli_query($conn, $sql);
+            header("Location: webbshop.php");
+        }   
+        endwhile;   
+    }
 }
 ?>
 
@@ -57,6 +61,7 @@ if(isset($_POST['addHoodieToKart']))
                                 <p class="varan">Hoodie - 500kr</p>
                                 <section class="till-korgen-knapp">
                                      <form class="addHoodie" action="webbshop.php" method="POST">
+                                        <input type="hidden" name="vara" value="hoodie">
                                         <input type="submit" value="Lägg i korgen" name="addHoodieToKart"/>
                                     </form>
                                 </section>
