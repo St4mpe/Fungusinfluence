@@ -7,7 +7,7 @@ $result = $conn->query($sql);
 $row = $result -> fetch_assoc();
 
 $userId = (int) $_SESSION['loggedInUserId'];
-$sqlOrders = "SELECT * FROM completedorders WHERE userid = $userId ORDER BY orderid DESC";
+$sqlOrders = "SELECT * FROM completedorders WHERE userid = $userId ORDER BY orderid ASC";
 $resultOrders = mysqli_query($conn, $sqlOrders);
 
 if (isset($_POST['logout']))
@@ -51,7 +51,7 @@ if (isset($_POST['logout']))
             </section>
         </section>
         <section class="orderinfo">
-            <h2 class="infotitle">Ordrar</h2>
+            <h2 class="infotitle">Order Historik</h2>
             <section class="orderstack">
             <?php
                 $currentOrderId = null;
