@@ -34,7 +34,7 @@ if(isset($_POST['placera']))
     $sqlClear = "UPDATE orderinfo SET produktantal = 0";
     mysqli_query($conn, $sqlClear);
 
-    header("Location: kundvagn.php");
+    header("Location: MyPage.php");
     exit();
 }
 ?>

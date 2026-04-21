@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    min-height: 100dvh;
+}
 .main{
     min-height: 600px;
     background: var(--mainBackground);
@@ -81,4 +84,24 @@
     outline: 0;
     border: 0;
     border-radius: 0.5rem;
+}
+.orderstack{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+}
+.orderItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.prodantal{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.orderShow{
+    color: white;
+    text-decoration: underline;
 }
