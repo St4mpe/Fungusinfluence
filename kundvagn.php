@@ -12,6 +12,31 @@ $result=mysqli_query($conn,$sql);
             header("Location: kundvagn.php");
         endwhile;  
     }
+
+if(isset($_POST['placera']))
+{
+    $userId = (int) $_SESSION['loggedInUserId'];
+
+    $sqlMax = "SELECT MAX(orderid) AS max_id FROM completedorders";
+    $resultMax = mysqli_query($conn, $sqlMax);
+    $rowMax = mysqli_fetch_assoc($resultMax);
+
+    $orderId = $rowMax['max_id'] + 1;
+    if (!$orderId) 
+    {
+        $orderId = 1;
+    }
+
+    $sqlInsert = "INSERT INTO completedorders (orderid, produktid, antal, userid) SELECT $orderId, produktid, produktantal, $userId FROM orderinfo WHERE produktantal > 0";
+
+    mysqli_query($conn, $sqlInsert);
+
+    $sqlClear = "UPDATE orderinfo SET produktantal = 0";
+    mysqli_query($conn, $sqlClear);
+
+    header("Location: kundvagn.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

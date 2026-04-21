@@ -38,6 +38,9 @@
     padding: 1rem 2rem 1rem 2rem;
     box-shadow: 0 -1px var(--kundvagnbars);
 }
+.cartDisplay:nth-child(even){
+    background-color: black;
+}
 .antalpris{
     display: flex;
     flex-direction: row;
