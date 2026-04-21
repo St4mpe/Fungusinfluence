@@ -8,6 +8,65 @@
     min-height: 100dvh;
     background: var(--mainBackground);
 }
-.cartDisplay{
+.mainHeader{
     color: var(--textcolor);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.ordername{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: var(--textcolor);
+    padding: 1rem;
+}
+.orderItems{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+.cartDisplay{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    color: var(--textcolor);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background: var(--webbshopKortBackground);
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: 0 -1px var(--kundvagnbars);
+}
+.orderKnappar{
+    width: 100%;    
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 7rem;
+    padding: 2rem 0rem 0rem;
+}
+.korgRensaOrderKnapp input[type="submit"]{
+    background: rgb(150, 0, 0);
+    width: 100%;
+    border: 0;
+    padding: 0.7rem;
+    color: black;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 0rem 0rem 2rem 0rem;
+}
+.korgPlaceraOrderKnapp input[type="submit"]{
+    background: green;
+    width: 100%;
+    border: 0;
+    padding: 0.7rem;
+    color: black;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 0rem 0rem 2rem 0rem;
 }

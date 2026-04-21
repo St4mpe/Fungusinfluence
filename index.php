@@ -1,3 +1,18 @@
+<?php 
+require_once("functions.php");
+    if (isset($_SESSION['userLoggedIn']))
+    { 
+        if ($_SESSION['userLoggedIn'] != 1) 
+        {
+            $sql="SELECT * FROM orderinfo";
+            $result=mysqli_query($conn,$sql);
+            while($row=mysqli_fetch_assoc($result)):
+                $sql="UPDATE orderinfo SET produktantal=0";
+                mysqli_query($conn, $sql); 
+            endwhile;   
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
