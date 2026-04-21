@@ -30,7 +30,7 @@ if (isset($_POST['logout']))
     <?php require_once("_header.php");?>
     <section class="main">
         <section class="textUppe">
-            <h1>Hej, <?= $row['user'] ?></h1>
+            <h1>Hej, <?=$row['user'] ?></h1>
         </section>
         <section class="userinfo">
             <h2 class="infotitle">Konto information</h2>
