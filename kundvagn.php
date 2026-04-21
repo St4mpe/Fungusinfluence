@@ -33,16 +33,38 @@ $result=mysqli_query($conn,$sql);
         </section>
         <section class="orderItems">
             <?php 
+                $_SESSION['summa'] = 0;
                 while($row=mysqli_fetch_assoc($result)):
                 if ($row['produktantal'] != 0)
                 {?>
                     <section class="cartDisplay">
                         <p><?= $row['produktid']?></p>
-                        <p><?= $row['produktantal']?></p>
+                        <section class="antalpris">
+                            <p>Antal: <?= $row['produktantal']?></p>
+                            <?php 
+                            $sqlprod="SELECT * FROM produkter";
+                            $resultprod=mysqli_query($conn,$sqlprod);
+                            while($rowprod=mysqli_fetch_assoc($resultprod)):
+                                if($rowprod['produktnamn'] == $row['produktid'])
+                                {?>
+                                    <p>Pris: <?=$row['produktantal'] * $rowprod['pris']?>kr</p>
+                                <?php
+                                     $_SESSION['summa'] += $row['produktantal'] * $rowprod['pris'];
+                                }
+                            endwhile
+                            ?>
+                            <?php
+                            ?>
+                        </section>
                     </section>
                 <?php 
-                } 
+                }
                 endwhile
+                ?>
+                <section class="cartDisplay">
+                    <p>Total summa: <?=$_SESSION['summa']?>kr</p>
+                </section>
+                <?php
             ?>
         </section>
         <section class="orderKnappar">

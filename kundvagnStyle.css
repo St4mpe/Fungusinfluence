@@ -30,13 +30,18 @@
     display: flex;
     flex: row;
     justify-content: space-between;
-    color: var(--textcolor);
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    color: var(--textcolor);
     background: var(--webbshopKortBackground);
     padding: 1rem 2rem 1rem 2rem;
     box-shadow: 0 -1px var(--kundvagnbars);
+}
+.antalpris{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
 }
 .orderKnappar{
     width: 100%;    
@@ -45,6 +50,9 @@
     place-content: center;
     gap: 7rem;
     padding: 2rem 0rem 0rem;
+}
+.korgRensaOrderKnapp{
+    margin-bottom: 2rem;
 }
 .korgRensaOrderKnapp input[type="submit"]{
     background: rgb(150, 0, 0);
