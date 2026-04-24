@@ -3,32 +3,50 @@ require_once("functions.php");
 
 if(isset($_POST['create']))
 {
+    $crp=new Crypt();
+
     $username=$_POST['name'];
-    $crpuser=new Crypt();
-    $encuser=$crpuser->enc($username);
+    $encuser=$crp->enc($username);
 
     $userpassword=md5($_POST['password']);
-    $useremail=$_POST['email'];
-    $userstad=$_POST['stad'];
-    $usergata=$_POST['gata'];
-    $userpostnummer=$_POST['postnummer'];
 
-    $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$encuser','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
+    $useremail=$_POST['email'];
+    $encmail=$crp->enc($useremail);
+
+    $userstad=$_POST['stad'];
+    $encstad=$crp->enc($userstad);
+
+    $usergata=$_POST['gata'];
+    $encgata=$crp->enc($usergata);
+
+    $userpostnummer=$_POST['postnummer'];
+    $encpostnummer=$crp->enc($userpostnummer);
+
+    $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$encuser','$userpassword', '$encmail', '$encstad', '$encgata', '$encpostnummer')";
     $result=mysqli_query($conn,$sql);
 }
 
 if (isset($_POST['login']))
 {
-    $usermail = ($_POST['mail']);
+    $usermail = $_POST['mail'];
     $userpassword = md5($_POST['password']);
 
-    $sql = "SELECT id, mail, pass FROM userinfo WHERE mail = '$usermail' AND pass = '$userpassword'";
-    $result = mysqli_query($conn,$sql);
-    $row = $result->fetch_assoc();
+    // Fetch all users and compare decrypted email
+    $sql = "SELECT id, mail, pass FROM userinfo WHERE pass = '$userpassword'";
+    $result = mysqli_query($conn, $sql);
 
-    if ($row)
-    {
-        $_SESSION['loggedInUserId'] = $row["id"];
+    $loggedInRow = null;
+
+    while ($row = $result->fetch_assoc()) {
+        $decryptedMail = $crp->dec($row['mail']);
+        if ($decryptedMail === $usermail) {
+            $loggedInRow = $row;
+            break;
+        }
+    }
+
+    if ($loggedInRow) {
+        $_SESSION['loggedInUserId'] = $loggedInRow["id"];
         $_SESSION['userLoggedIn'] = true;
         header("Location: MyPage.php");
         exit();

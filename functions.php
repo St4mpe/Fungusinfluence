@@ -9,7 +9,7 @@ $conn=mysqli_connect($host, $user, $pass, $db);
 
 class Crypt{
     private $password;
-    /*
+    /**
      * Undocumented function
      *
      * @param string $passkey
@@ -18,7 +18,7 @@ class Crypt{
     {
         $this->password=$passkey;
     }
-    /*
+    /**
      * Undocumented function
      *
      * @param [string] $plaintext
@@ -33,7 +33,7 @@ class Crypt{
         $ret= $iv . $hash . $ciphertext;
         return base64_encode($ret);
     }
-    /*
+    /**
      * Undocumented function
      *
      * @param [string] $ivHashCiphertext

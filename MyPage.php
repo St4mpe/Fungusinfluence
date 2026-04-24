@@ -1,6 +1,8 @@
 <?php  
 require_once("functions.php");
 
+$crp=new Crypt();
+
 $loggedinUserId = $_SESSION['loggedInUserId'];
 $sql = "SELECT * FROM userinfo WHERE id = '$loggedinUserId'";
 $result = $conn->query($sql);
@@ -30,11 +32,7 @@ if (isset($_POST['logout']))
     <?php require_once("_header.php");?>
     <section class="main">
         <section class="textUppe">
-            <h1>Hej, 
-                <?php
-                    $crp=new Crypt();
-                    $decStr=$crp->dec($row['user']);
-                ?>
+            <h1>Hej, <?php echo $crp->dec($row['user']); ?>
             </h1>
         </section>
         <section class="userinfo">
@@ -43,19 +41,20 @@ if (isset($_POST['logout']))
                 <section class="textinfo">
                     <h2>Namn:</h2>
                     <p>
-                        <?php
-                            $crp=new Crypt();
-                            $decStr=$crp->dec($row['user']);
-                        ?>
+                        <?php echo $crp->dec($row['user']); ?>
                     </p>
                 </section>
                 <section class="textinfo">
                     <h2>Mail:</h2>
-                    <p><?= $row['mail'] ?></p>
+                    <p>
+                        <?php echo $crp->dec($row['mail']); ?>
+                    </p>
                 </section>
                 <section class="textinfo">
                     <h2>Adress:</h2>
-                    <p><?= $row['road'] ?></p>
+                    <p>
+                        <?php echo $crp->dec($row['road']); ?>
+                    </p>
                     <p><?= $row['stad'] ?>, <?= $row['postnummer'] ?></p>
                 </section>
             </section>
