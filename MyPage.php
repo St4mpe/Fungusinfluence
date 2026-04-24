@@ -55,7 +55,9 @@ if (isset($_POST['logout']))
                     <p>
                         <?php echo $crp->dec($row['road']); ?>
                     </p>
-                    <p><?= $row['stad'] ?>, <?= $row['postnummer'] ?></p>
+                    <p>
+                        <?php echo $crp->dec($row['stad']);echo " "; echo $crp->dec($row['postnummer']);?>
+                    </p>
                 </section>
             </section>
         </section>
