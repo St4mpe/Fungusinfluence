@@ -4,19 +4,22 @@ require_once("functions.php");
 if(isset($_POST['create']))
 {
     $username=$_POST['name'];
+    $crpuser=new Crypt();
+    $encuser=$crpuser->enc($username);
+
     $userpassword=md5($_POST['password']);
     $useremail=$_POST['email'];
     $userstad=$_POST['stad'];
     $usergata=$_POST['gata'];
     $userpostnummer=$_POST['postnummer'];
 
-    $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$username','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
+    $sql="INSERT INTO userinfo(user, pass, mail, stad, road, postnummer) VALUES ('$encuser','$userpassword', '$useremail', '$userstad', '$usergata', '$userpostnummer')";
     $result=mysqli_query($conn,$sql);
 }
 
 if (isset($_POST['login']))
 {
-    $usermail = md5($_POST['mail']);
+    $usermail = ($_POST['mail']);
     $userpassword = md5($_POST['password']);
 
     $sql = "SELECT id, mail, pass FROM userinfo WHERE mail = '$usermail' AND pass = '$userpassword'";

@@ -30,14 +30,24 @@ if (isset($_POST['logout']))
     <?php require_once("_header.php");?>
     <section class="main">
         <section class="textUppe">
-            <h1>Hej, <?=$row['user'] ?></h1>
+            <h1>Hej, 
+                <?php
+                    $crp=new Crypt();
+                    $decStr=$crp->dec($row['user']);
+                ?>
+            </h1>
         </section>
         <section class="userinfo">
             <h2 class="infotitle">Konto information</h2>
             <section class="infoStack">
                 <section class="textinfo">
                     <h2>Namn:</h2>
-                    <p><?= $row['user'] ?></p>
+                    <p>
+                        <?php
+                            $crp=new Crypt();
+                            $decStr=$crp->dec($row['user']);
+                        ?>
+                    </p>
                 </section>
                 <section class="textinfo">
                     <h2>Mail:</h2>
@@ -73,10 +83,9 @@ if (isset($_POST['logout']))
                     $currentOrderId = $rowOrder['orderid'];?>
                     <section class="orderDisplay">
                         <h3 class="orderShow">Order: <?= $orderCount ?></h3>
-                    <?php endif; ?>
+                        <?php endif; ?>
                         <section class="orderItem">
-                        <p><?= $rowOrder['produktid'] ?></p>
-
+                            <p><?= $rowOrder['produktid'] ?></p>
                         <?php
                         $sqlprod = "SELECT * FROM produkter";
                         $resultprod = mysqli_query($conn, $sqlprod);
