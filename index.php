@@ -24,8 +24,10 @@ require_once("functions.php");
 <body>
     <?php require_once("_header.php");?>
     <section class="main">
-        <section class="enviromentpic">
-            <h1>Endure & Survive</h1>
+        <section class="pic">
+            <section class="enviromentpic">
+                <h1>Endure & Survive</h1>
+            </section>
         </section>
             <section class=undertextbox>
                 <section class="text">
