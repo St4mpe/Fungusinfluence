@@ -67,18 +67,18 @@ if (isset($_POST['login']))
     <section class="login-page">
         <section class="form">
             <form class="register-form" action="Konto.php" method="POST">
-                <input type="text" name="name" placeholder="Namn"/>
-                <input type="password" name="password" placeholder="Lösenord"/>
-                <input type="email" name="email" placeholder="Mail Adress"/>
-                <input type="stad" name="stad" placeholder="Stad"/>
-                <input type="gata" name="gata" placeholder="Gata"/>
-                <input type="postnummer" name="postnummer" placeholder="Postnummer"/>
+                <input type="text" name="name" placeholder="Namn" required maxlength="20" pattern="[a-zA-ZåäöÅÄÖ]{0,20}">
+                <input type="password" name="password" placeholder="Lösenord" required maxlength="32" pattern="[a-zA-ZåäöÅÄÖ0-9]{6,32}">
+                <input type="email" name="email" placeholder="Mail Adress" required maxlength="100" pattern="([a-zA-ZåäöÅÄÖ0-9]{2,}@[a-zA-ZåäöÅÄÖ0-9]{3,}\.[a-zA-ZåäöÅÄÖ]{2,}){1,100}">
+                <input type="stad" name="stad" placeholder="Stad" required maxlength="20" pattern="[a-zA-ZåäöÅÄÖ]{0,20}">
+                <input type="gata" name="gata" placeholder="Gata" required maxlength="20" pattern="[a-zA-ZåäöÅÄÖ0-9 ]{0,20}">
+                <input type="postnummer" name="postnummer" placeholder="Postnummer" required maxlength="5" pattern="[0-9]+">
                 <input type="submit" value="Create Account" name="create">
                 <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
             <form class="login-form" action="Konto.php" method="POST">
-                <input type="text" name="mail" placeholder="Email"/>
-                <input type="password" name="password" placeholder="Password"/>
+                <input type="text" name="mail" placeholder="Email" required maxlength="100" pattern="([a-zA-ZåäöÅÄÖ0-9]{2,}@[a-zA-ZåäöÅÄÖ0-9]{3,}\.[a-zA-ZåäöÅÄÖ]{2,}){1,100}">
+                <input type="password" name="password" placeholder="Password" required maxlength="32" pattern="[a-zA-ZåäöÅÄÖ0-9]{6,32}">
                 <input type="submit" value="Login" name="login"/>
                 <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
