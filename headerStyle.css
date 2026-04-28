@@ -1,10 +1,10 @@
 @import url("färger.css");
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
+header {
     background: var(--headerBackround);
     padding: 1rem;
     padding-left: 1.5rem;
@@ -15,7 +15,7 @@ header{
     color: var(--headerTextColor);
     user-select: none;
 }
-header nav{
+header nav {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
@@ -24,42 +24,97 @@ header nav{
     user-select: none;
     background: var(--headerBackround);
 }
-header nav a{
+header nav a {
     text-decoration: none;
     color: var(--navColor);
     font-size: 1.1rem;
     transition: transform .1s;
     user-select: none;
 }
-header img{
+header img {
     height: 25%;
     width: 25%;
     user-select: none;
 }
-a:hover{
+a:hover {
     color: var(--navHoverColor);
     text-shadow: 0px 0px 5px var(--navHoverColor);
     text-decoration: underline;
     transform: scale(1.05);
     user-select: none;
 }
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
 }
 
-@media screen and (max-width:900px){
-    header{
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--navColor);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+@media screen and (max-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header img {
+        width: 150px;
+        height: auto;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--headerBackround);
+        z-index: 4;
+    }
+    .navbar.open {
+        display: flex;
+    }
+    header nav {
         flex-direction: column;
-        justify-content: center;
+        gap: 0;
+        margin: 0;
+        width: 100%;
     }
-    header nav{
-        margin-left: auto;
-        margin-right: auto;
+    header nav a {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 1rem;
     }
-    header img{
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+    a:hover {
+        transform: scale(1.005);
     }
 }

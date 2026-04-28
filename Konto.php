@@ -1,10 +1,10 @@
 <?php
 require_once("functions.php");
 
+$crp=new Crypt();
+
 if(isset($_POST['create']))
 {
-    $crp=new Crypt();
-
     $username=$_POST['name'];
     $encuser=$crp->enc($username);
 

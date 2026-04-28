@@ -151,7 +151,7 @@ a.hereIAm{
     font-size:1.8rem;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:800px){
     .firstPicture{
         flex-direction: column;
     }
