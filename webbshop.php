@@ -198,7 +198,7 @@ isset($_POST['addMuggToKart']))
                         { 
                             if ($_SESSION['userLoggedIn'] == 1) 
                             {?>
-                                <p class="varan">Mugg - 150krs</p>
+                                <p class="varan">Mugg - 150kr</p>
                                 <section class="till-korgen-knapp">
                                      <form class="addMugg" action="webbshop.php" method="POST">
                                         <input type="hidden" name="vara" value="mugg">
