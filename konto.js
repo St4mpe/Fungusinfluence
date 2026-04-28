@@ -10,4 +10,24 @@ document.addEventListener("DOMContentLoaded", function () {
             loginForm.classList.toggle("active");
         });
     });
+
+    const customMessages = {
+        "name":       "Namnet får bara innehålla bokstäver (max 20 tecken).",
+        "password":   "Lösenordet måste vara 6–32 tecken, bara bokstäver och siffror.",
+        "email":      "Ange en giltig e-postadress, t.ex. namn@exempel.se",
+        "stad":       "Staden får bara innehålla bokstäver (max 20 tecken).",
+        "gata":       "Gatan får bara innehålla bokstäver, siffror och mellanslag.",
+        "postnummer": "Postnumret måste vara exakt 5 siffror.",
+        "mail":       "Ange en giltig e-postadress, t.ex. namn@exempel.se",
+    };
+
+    document.querySelectorAll("input:not([type='submit'])").forEach(function (input) {
+        input.addEventListener("input", function () {
+            input.setCustomValidity("");
+        });
+        input.addEventListener("invalid", function () {
+            const msg = customMessages[input.name];
+            if (msg) input.setCustomValidity(msg);
+        });
+    });
 });
